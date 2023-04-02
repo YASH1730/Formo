@@ -1,0 +1,26 @@
+.listContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 5% 5%;
+    background-color: rgba(190, 190, 190, 0.171);
+}
+
+.addFrom{
+    display: flex;
+    border: 2px dotted rgba(129, 129, 129, 0.39) !important;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 170px;
+}
+
+.editFrom{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgba(129, 129, 129, 0.39) !important;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 170px;
+}

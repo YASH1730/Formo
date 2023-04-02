@@ -1,0 +1,15 @@
+.logContainer img {
+    width: 100%;
+}
+
+.logContainer form {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    gap: 1rem;
+    align-items: center;
+}
+
+.signup{
+    flex-direction: row-reverse !important;
+}

@@ -1,0 +1,53 @@
+.flexUtility {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainWrapper{
+    display: flex;
+    padding: 5% 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.titleSection{
+    display: flex;
+    flex: 1;
+    flex-direction: column !important;
+    width: 85%;
+    border-top: 10px solid #232087;
+    border-radius: 15px;
+    padding: 3%;
+    gap: 1rem;
+}
+
+.section{
+    position: relative;
+    padding: 3%;
+    gap: 1rem;
+    border-radius: 15px;
+    width: 85%;
+}
+
+.removeSec{
+    display: flex;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    padding: 3%;
+}
+
+.optionWrapper{
+    display: flex;
+    width: 100%;
+}
+
+.submitButton{
+    display: flex;
+    justify-content: right;
+}
