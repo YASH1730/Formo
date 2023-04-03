@@ -76,6 +76,8 @@ const Form = ({ history }) => {
                 FD.append(key,response[key])
             })
 
+            FD.append("email",auth.email)
+            FD.append("uuid",uuid);
             let res = await submitResponse(FD);
 
             if (res.status === 200) {

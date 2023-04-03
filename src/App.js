@@ -33,7 +33,7 @@ function App() {
       <SnackBar/>
       <Login/>
       <Router />
-      <Footer />
+      <Footer  />
     </BrowserRouter>
     </ThemeProvider>
   );

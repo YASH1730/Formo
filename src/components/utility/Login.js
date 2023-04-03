@@ -74,6 +74,7 @@ const Login = () => {
           email : res.data.email,
           token : res.data.token,
         }))
+        localStorage.setItem("token",res.data.token)
         handleClose();
         dispatch(setAlert({
           open: true,

@@ -1,6 +1,6 @@
 import { Box, IconButton, Typography } from '@mui/material';
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 // logo 
 import logo from '../assets/image/logo.svg'
 // icon 
@@ -11,10 +11,11 @@ import '../assets/css/nav.css'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAlert, setAuth, setForm } from '../../store/action/action';
-const NavBar = ({ history }) => {
+const NavBar = () => {
 
     const dispatch = useDispatch();
     const {auth} = useSelector(state=>state);
+    const history = useNavigate();
 
 
     function handleLog() {
@@ -30,6 +31,8 @@ const NavBar = ({ history }) => {
             name: null,
             token : null
         }))
+        localStorage.clear()
+        history('/')
         dispatch(setAlert({
             open : true,
             variant : 'success',
@@ -50,16 +53,17 @@ const NavBar = ({ history }) => {
             {/* links  */}
             <Box component={"ul"} className='links'>
                 <Typography variant='body2' component={Link} to='/' >Home</Typography>
-                <Typography variant='body2' component={Link} to='/' >About</Typography>
-                <Typography variant='body2' component={Link} to='/' >Contact</Typography>
+                { auth.isAuth && <Typography variant='body2' component={Link} to='/listing' >Listing</Typography>}
+                {/* <Typography variant='body2' component={Link} to='/' >About</Typography> */}
+                {/* <Typography variant='body2' component={Link} to='/' >Contact</Typography> */}
             </Box>
             {/* button  */}
             <Box>
                { !auth.isAuth ? <IconButton color='primary' onClick={handleLog} size='large'>
-                    <AccountCircleIcon fontSize='100pxA' />
+                    <AccountCircleIcon  />
                 </IconButton> :
                 <IconButton color='primary' onClick={handleLogout} size='large'>
-                    <LogoutIcon fontSize='100pxA' />
+                    <LogoutIcon  />
                 </IconButton>}
             </Box>
         </Box>

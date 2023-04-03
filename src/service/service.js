@@ -13,7 +13,12 @@ function addForm (data){
     return axios.post(`${API}/addForm`,data)
 }
 function listForm (data){
-    return axios.get(`${API}/listForm?email=${data}`)
+    console.log(localStorage.getItem("token"))
+    return axios.get(`${API}/listForm?email=${data}`,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
 }
 
 function getFormDetails (data){
@@ -21,7 +26,11 @@ function getFormDetails (data){
 }
 
 function editForm (data){
-    return axios.patch(`${API}/editForm`,data)
+    return axios.patch(`${API}/editForm`,data,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
 }
 
 function submitResponse (data){

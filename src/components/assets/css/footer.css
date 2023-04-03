@@ -1,0 +1,16 @@
+.footerContainer{
+    display: flex;
+    position: relative;
+    padding: 1% 0%;
+    gap: 1rem;
+    flex-direction: column;
+    top: 80vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.divider{
+    width: 100%;
+    background-color:  rgb(34, 0, 158) !important;
+}
