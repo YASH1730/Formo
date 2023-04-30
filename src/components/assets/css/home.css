@@ -1,24 +1,127 @@
-.topSection{
-    padding: 3% 4%;
+.homeWrapper{
+    padding: 1rem;
 }
 
-.topSection img{
+.headerContainer{
+    display: flex;
+    background-color: #355070;
+    height : 120px;
+    padding : 25px;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.statusWrapper {
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+}
+
+.operationSection{
+    display: flex;
+    padding: 0.5rem;
+    /* gap: 1.5rem; */
+    align-items: baseline;
     width: 100%;
 }
 
-.bannerContent{
+.leftSideOperationDesk{
+    /* display: flex; */
+    /* width: 30%; */
+    /* flex-direction: column; */
+    /* gap : 1rem */
+}
+.rightSideOperationDesk{
+    flex: 1;
     display: flex;
-    padding-top: 20% ;
-    justify-content: center;
-    flex-direction: column !important;
+    flex-direction: column;
+    gap : 1rem;
+}
+
+.historyWrapper{
+    display: flex;
+    position: absolute;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: rgba(243, 243, 243, 0.952);
+    z-index: 1000;
+    max-height: 300px ;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.historyContainer{
+    flex: 1;
+    overflow-y: scroll;
+    padding: 0.3rem;
+    border-radius: 10px;
+    /* border: 1px solid #23208773; */
+}
+
+.resultWrapper{
+    white-space: nowrap; 
+    /* z-index: -1 !important; */
+    width: 220px; 
+    overflow: hidden;
+    text-overflow: ellipsis ;
+}
+
+.textAreaWrapper{
+    display: flex;
+    flex: 1;
+    align-items: right;
     gap: 1rem;
-    padding: 2%;
+    flex-direction: column;
 }
 
-.bannerContent strong {
-    color : #232087;
+.textAreaWrapper textarea{
+    border-radius: 10px;
+    border-color: #232087;
+    resize: none;
+    padding: 5px;
 }
 
-.textBanner{
-    font-size: 2.7rem !important;
+.imageSearchWrapper{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.dropzone{
+    border: 2px dotted #232087;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.dropperContainer{
+    padding: 0.8rem;
+    border: 1px solid #23208773;
+    border-radius: 10px;
+
+}
+
+.resultBoxContainer{
+    /* padding: 0.8rem; */
+    min-height: 560px;
+    border: 1px solid #23208773;
+    border-radius: 10px;
+}
+
+.resultBoxWrapper{
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+}
+
+.historyButton{
+    display: flex;
+    /* background-color: #c2c2cf3f; */
+    /* border-radius: 10px; */
+    gap: 0.5rem;
+    /* flex-direction: column-reverse; */
+    position: fixed;
+    bottom: 2%;
+}
+
+.historyButton button{
+    border-radius: 100px;
 }

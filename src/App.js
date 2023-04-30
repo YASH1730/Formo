@@ -22,18 +22,18 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#232087',
+        main: '#355070',
       },
     },
   });
   return (
     <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <NavBar />
+      {/* <NavBar /> */}
       <SnackBar/>
       <Login/>
       <Router />
-      <Footer  />
+      {/* <Footer  /> */}
     </BrowserRouter>
     </ThemeProvider>
   );
